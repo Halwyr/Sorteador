@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Soteador para ajudar a escolher entre várias opções.">
+    <meta name="keywords" content="sorteador, sorteio, opções, aleatório, indeciso"
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Montserrat:ital@0;1&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="icon" href="/img/sorteio.svg" type="image/x-icon">
+    <title>Sorteador</title>
+</head>
+
+<body class="container__body">
+
+    <main class="container__main">
+        <section class="container__pag">
+            <h1 class="instructions">Regras do Sorteador:</h1>
+            <ul class="list">
+                <li>
+                    <h3>Insira, ao lado, as opções que deseja sortear.</h3>
+                </li>
+                <li>
+                    <h3>O sistema funcionará com pelo menos duas opções.</h3>
+                </li>
+                <li>
+                    <h3>Opções duplicadas não serão aceitas.</h3>
+                </li>
+                <li>
+                    <h3>Não serão aceitos campos em branco.</h3>
+                </li>
+            </ul>
+            <h2 class="purpose">Finalidade:</h2>
+            <p class="desc">Este sorteador tem como intuito ajudar a escolher dentre várias sugestões dadas ao usuário.
+            </p>
+
+            <form class="form">
+                <label for="choice" class="form__label">Digite uma opção:</label>
+                <input id="choice" class="form__input" type="text" required>
+                <div class="buttons">
+                    <button onclick="adicionar()" type="button" class="button__primary">Adicionar</button>
+                    <button onclick="sortear()" type="button" class="button__secondary">Sortear</button>
+                    <button onclick="limpar()" type="button" class="button__terciary">Limpar</button>
+                </div>
+            </form>
+        </section>
+
+        <section class="results">
+            <article>
+                <p class="options">Opções Inseridas:</p>
+                <div class="container__options">
+                    <p id="list_options"></p>
+                </div>
+            </article>
+            <p class="container__draw">Opção Sorteada:</p>
+            <div id="draw"></div>
+        </section>
+    </main>
+
+    <div class="popup-overlay" id="overlay" onclick="fecharPopup()"></div>
+    <div class="popup" id="popup">
+        <p id="popup-message"></p>
+        <button class="button-fechar" onclick="fecharPopup()">Fechar</button>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
