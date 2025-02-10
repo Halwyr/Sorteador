@@ -1,12 +1,13 @@
 :root {
-    --cor-primary: #1e90ff;
-    --cor-secondary: #ff6347;
-    --cor-tertiary: #32cd32;
-    --cor-text: #333;
-    --cor-background: #B0E0E6;
-    --cor-border: #ddd;
-    --cor-hover: #1c86ee;
+    --color-primary: #1e90ff;
+    --color-secondary: #ff6347;
+    --color-tertiary: #32cd32;
+    --color-text: #000000;
+    --color-background: #B0E0E6;
+    --color-white: #ffffff;
+    --color-hover: #1c86ee;
     --font-text: "Montserrat", serif;
+    --font-secondary: "Bebas Neue", serif;
 }
 
 *,
@@ -19,8 +20,8 @@
 
 body {
     font-family: var(--font-text);
-    background-color: var(--cor-background);
-    color: var(--cor-text);
+    background-color: var(--color-background);
+    color: var(--color-text);
     line-height: 1.6;
     padding: 20px;
 }
@@ -30,23 +31,16 @@ h1, h3 {
     font-weight: 400;
 }
 
-h2 {
-    text-align: center;
-    font-family: var(--font-text);
-    font-weight: 400;
-    margin-bottom: 4%;
-}
-
 .container__body {
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background-color: var(--cor-background);
+    background-color: var(--color-background);
 }
 
 .container__main {
-    background-color: #fff;
+    background-color:var(--color-white);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
     padding: 30px;
@@ -65,7 +59,7 @@ h2 {
     margin-bottom: 20px;
     text-align: center;
     font-weight: 500;
-    color: var(--cor-primary);
+    color: var(--color-primary);
 }
 
 .list {
@@ -83,9 +77,9 @@ h2 {
 .desc {
     text-align: center;
     font-size: 1.3em;
-    margin-bottom: 20px;
-    color: var(--cor-primary);
-    font-family: "Bebas Neue", serif;
+    margin-bottom: 10%;
+    color: var(--color-text);
+    font-family: var(--font-secondary);
     font-weight: 400;
     font-style: normal;
 }
@@ -97,21 +91,22 @@ h2 {
 }
 
 .form__label {
-    font-size: 1.2em;
-    color: var(--cor-text);
+    font-size: 1.5em;
+    color: var(--color-text);
     text-align: center;
+    font-family: var(--font-secondary);
 }
 
 .form__input {
     padding: 12px;
-    border: 1px solid var(--cor-border);
+    border: 1px solid var(--color-text);
     border-radius: 5px;
     font-size: 1.2em;
     transition: border-color 0.3s ease;
 }
 
 .form__input:focus {
-    border-color: var(--cor-primary);
+    border-color: var(--color-primary);
     outline: none;
 }
 
@@ -132,17 +127,17 @@ h2 {
 }
 
 .button__primary {
-    background-color: var(--cor-primary);
+    background-color: var(--color-primary);
     color: #fff;
 }
 
 .button__primary:hover {
-    background-color: var(--cor-hover);
+    background-color: var(--color-hover);
     transform: scale(1.05);
 }
 
 .button__secondary {
-    background-color: var(--cor-secondary);
+    background-color: var(--color-secondary);
     color: #fff;
 }
 
@@ -152,7 +147,7 @@ h2 {
 }
 
 .button__terciary {
-    background-color: var(--cor-tertiary);
+    background-color: var(--color-tertiary);
     color: #fff;
 }
 
@@ -181,8 +176,22 @@ h2 {
 
 #list_options {
     font-size: 1.2em;
-    color: #555;
+    color:var(--color-text);
+    font-family: var(--font-secondary);
     font-weight: 500;
+    list-style-type: none;
+}
+
+.container__options,#draw_result {
+    border: 1px solid var(--color-white);
+    padding: 15px;
+    border-radius: 10px;
+    background-color: var(--color-hover);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    max-width: 500px;
+    font-family: var(--font-secondary);
+    font-size: 1.5em;
 }
 
 .popup-overlay {
@@ -202,18 +211,28 @@ h2 {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: #fff;
+    background-color: var(--color-background);
     padding: 20px;
     border-radius: 10px;
+    font-family: var(--font-secondary);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
     text-align: center;
     z-index: 1001;
 }
 
-.button-fechar {
-    background-color: var(--cor-primary);
-    color: white;
-    padding: 10px 20px;
+.popup.show {
+    display: block;
+}
+
+.popup-overlay.show {
+    display: block;
+}
+
+.button-close {
+    background-color: var(--color-hover);
+    font-family: var(--font-text);
+    color: var(--color-white);
+    padding: 10px 10px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -221,8 +240,8 @@ h2 {
     transition: background-color 0.3s;
 }
 
-.button-fechar:hover {
-    background-color: darkblue;
+.button-close:hover {
+    background-color: red;
 }
 
 @media (max-width: 1080px) {
@@ -234,6 +253,10 @@ h2 {
     .form__input,
     .buttons {
         font-size: 0.6em;
+    }
+
+    .container__options,#draw_result {
+        font-size: 1.2em;
     }
 
 }
