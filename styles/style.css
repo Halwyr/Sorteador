@@ -259,4 +259,14 @@ h1, h3 {
         font-size: 1.2em;
     }
 
+    .desc,
+    h1, h3,
+    .list,
+    .form__label,
+    .options,
+    .container__draw,
+    .instructions{
+        font-size: 0.9em;
+    }
+
 }
