@@ -20,18 +20,19 @@ Seja você uma pessoa indecisa ou parte de um casal (assim como eu e minha namor
 - **Exibição dinâmica:** Visualize as opções já inseridas.
 - **Sorteio aleatório:** Gere uma escolha entre as opções fornecidas.
 - **Interação Melhorada:** Pop-ups para mensagens ao usuário.
+- **Limpeza da Lista:** Apague todas as opções de forma simples.
 
 ---
 
 ## 🚧 **Status do Projeto:**
-- A lógica em **JavaScript** para o sorteio ainda será implementada futuramente.
+- A lógica em **JavaScript** foi implementada e permite adicionar, sortear e limpar opções.
 
 ---
 
 ## 🛠 **Tecnologias Utilizadas:**
 - **HTML:** Estrutura da página.
 - **CSS:** Estilização da interface.
-- **JavaScript:** (Ainda a ser implementado).
+- **JavaScript:** Lógica de sorteio e manipulação da interface.
 
 ---
 
@@ -43,16 +44,8 @@ Seja você uma pessoa indecisa ou parte de um casal (assim como eu e minha namor
 │   └── styles.css
 ├── README.md
 ├── js/
-│   └── script.js (Em desenvolvimento)
+│   └── script.js
 └── img/
 ```
-
-## 🔧 **Possíveis Melhorias Futuras:**
-- Implementação do script em **JavaScript** para o funcionamento completo.
-- Validação avançada de entradas.
-- Melhor responsividade para dispositivos móveis.
-- Efeitos visuais aprimorados.
-
----
 
 Desenvolvido com foco em aprendizado e prática 🚀
