@@ -64,7 +64,7 @@ function drawList() {
     const randomOption = drawListOptions[Math.floor(Math.random() * drawListOptions.length)];
 
     const resultElement = document.getElementById('draw_result');
-    resultElement.textContent = `Está foi a opção sorteada: ${randomOption}`;
+    resultElement.textContent = `Opção Sorteada: ${randomOption}`;
 }
 
 
