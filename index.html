@@ -20,7 +20,17 @@
 
     <main class="container__main">
 
-        <p class="desc">Este sistema foi criado para acabar com a indecisão de forma simples e divertida. Com ele, você pode:</p>
+        <h1 class="theme-description">Tema da Página:</h1>
+        <div class="themes">
+            <img class="clear_theme"src="./img/tema_claro.png" alt="Seleção de tema - Modo Claro">
+            <div class="rail" id="rail">
+                <div class="indicator"></div>
+            </div>
+            <img class="dark_theme" src="./img/tema_escuro.png" alt="Seleção de tema - Modo Escuro">
+        </div>
+
+        <p class="desc">Este sistema foi criado para acabar com a indecisão de forma simples e divertida. Com ele, você
+            pode:</p>
 
         <ul class="list container__desc">
             <li>
@@ -34,7 +44,7 @@
                 <h3>Sortear uma opção aleatória com um clique;</h3>
             </li>
         </ul>
-        
+
         <p class="desc">Seja para decidir onde jantar, o que fazer no fim de semana ou qualquer escolha difícil,<br>
             o sorteador é a solução perfeita para casais indecisos (sim, entendemos vocês!)<br>
             ou qualquer pessoa que precise de uma ajudinha na tomada de decisões.
@@ -59,7 +69,7 @@
 
             <form class="form">
                 <label for="choice" class="form__label">No campo abaixo, insira suas opções:</label>
-                <input id="choice" class="form__input" type="text" placeholder="Opções:" required>
+                <input id="choice" class="form__input" type="text" placeholder="Insira as Opções:" required>
                 <div class="buttons">
                     <button id="addOption" type="button" class="button__primary"
                         aria-label="Adicionar opção">Adicionar</button>
@@ -81,13 +91,16 @@
         </section>
     </main>
 
-    <div id="overlay" class="popup-overlay"></div>
-    <div id="popup" class="popup">
-        <p id="popup-message"></p>
-        <button onclick="closePopup()" class="button-close">Fechar</button>
+    <div class="popup-overlay" id="overlay" onclick="closePopup()"></div>
+    <div class="popup" id="popup">
+        <h2 id="popup-title"></h2>
+        <p id="popup-message" class="message"></p>
+        <button class="button-fechar" onclick="closePopup()">Fechar</button>
     </div>
 
     <script src="js/script.js" defer></script>
+    <script src="js/themes.js"></script>
+    <script src="js/popup.js"></script>
 </body>
 
 </html>
