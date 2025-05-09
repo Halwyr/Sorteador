@@ -34,6 +34,8 @@ function addOptions() {
 
   const list = document.getElementById("list_options");
   const newOptionItem = document.createElement("li");
+  newOptionItem.document.createElement("img");
+  newOptionItem.setAttribute("src", "./img/remocao.png");
   newOptionItem.textContent = optionValue;
   list.appendChild(newOptionItem);
 

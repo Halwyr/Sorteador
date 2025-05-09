@@ -13,7 +13,11 @@
   --dark-theme-main: #475b6a;
   --dark-theme-lists: #6a828d;
   --dark-point: #aebbc3;
-  --rail: #515A6B;
+  --rail: #515a6b;
+  --dark-button: #ff2401;
+  --dark-draw: #c84b31;
+  --dark-add: #03346e;
+  --dark-clean: #950101;
 }
 
 *,
@@ -56,7 +60,7 @@ h3 {
 .rail {
   width: 50px;
   height: 15px;
-  background-color: var(--rail);
+  background-color: var(--color-background);
   border-radius: 150px;
   position: relative;
   cursor: pointer;
@@ -80,11 +84,11 @@ h3 {
 
 .rail.dark .indicator {
   left: 33px;
-  background-color: var(--dark-theme-body);
+  background-color: var(--dark-point);
 }
 
 .rail.dark {
-  background-color: var(--color-hover);
+  background-color: var(--dark-theme-body);
 }
 
 body.dark {
@@ -120,6 +124,30 @@ li.dark {
   color: var(--color-white);
 }
 
+#popup {
+  background-color: var(--dark-theme-body);
+}
+
+#popup-title {
+  color: var(--dark-button);
+}
+
+#popup-message {
+  color: var(--color-white);
+}
+
+#addOption.dark {
+  background-color: var(--dark-add);
+}
+
+#toClean.dark {
+  background-color: var(--dark-clean);
+}
+
+#draw.dark {
+  background-color: var(--dark-draw);
+}
+
 .container__body {
   display: flex;
   justify-content: center;
@@ -145,11 +173,11 @@ li.dark {
 
 .instructions {
   font-size: 2em;
-  margin-bottom: 20px;
+  margin-bottom: 5%;
   text-align: center;
   font-weight: 500;
   font-family: var(--font-secondary);
-  color: var(--color-primary);
+  color: var(--color-text);
 }
 
 .list {
@@ -166,7 +194,7 @@ li.dark {
 .desc {
   text-align: center;
   font-size: 1.3em;
-  margin-bottom: 10%;
+  margin-bottom: 5%;
   color: var(--color-text);
   font-family: var(--font-secondary);
   font-weight: 400;
@@ -293,9 +321,7 @@ li.dark {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 100%;
-  max-width: 20%;
-  padding: 20px;
+  width: 15%;
   font-family: Montserrat;
   font-size: 20px;
   font-weight: 400;
@@ -329,18 +355,7 @@ li.dark {
   transition: opacity 0.4s ease, transform 0.4s ease;
 }
 
-@keyframes fadeInUp {
-  0% {
-    opacity: 0;
-    transform: translateY(-20px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.button-fechar {
+.button-close {
   background-color: var(--button-close);
   font-family: var(--font-text);
   font-weight: 600;
@@ -351,15 +366,16 @@ li.dark {
   cursor: pointer;
   font-size: 1.1em;
   transition: background-color 0.3s;
+  margin-bottom: 10%;
 }
 
-.button-fechar:hover {
+.button-close:hover {
   background-color: rgb(212, 62, 62);
   transform: scale(1.1);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
 }
 
-.button-fechar:focus {
+.button-close:focus {
   outline: none;
   box-shadow: 0 0 0 3px rgba(255, 118, 118, 0.5);
 }
@@ -386,6 +402,23 @@ li.dark {
   .form__input,
   .buttons {
     font-size: 0.6em;
+  }
+
+  .popup {
+    width: 60%;
+  }
+
+  .message {
+    font-size: 0.8em;
+  }
+
+  .popup h2 {
+    font-size: 1.3em;
+  }
+
+  .button-close {
+    width: 50%;
+    font-size: 0.7em;
   }
 
   .container__options,
