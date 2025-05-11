@@ -9,6 +9,11 @@ O sistema permite que o usuário insira opções, visualize as opções já adic
 
 Seja você uma pessoa indecisa ou parte de um casal (assim como eu e minha namorada 😅) que nunca sabe o que comer ou fazer no fim de semana, este sorteador pode salvar seu dia!
 
+---
+
+## 📸 Prévia
+
+![Demonstração da página.](/img/result.png)
 
 ---
 
