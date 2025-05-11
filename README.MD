@@ -38,14 +38,16 @@ Seja você uma pessoa indecisa ou parte de um casal (assim como eu e minha namor
 
 ## 📂 **Estrutura de Arquivos:**
 ```bash
-📂 PROJETO
-├── index.html
+📂 SORTEADOR
+├── img/
+├── js/
+│   └── popup.js
+│   └── script.js
+│   └── themes.js
 ├── styles
 │   └── styles.css
+├── index.html
 ├── README.md
-├── js/
-│   └── script.js
-└── img/
 ```
 
 Desenvolvido com foco em aprendizado e prática 🚀
