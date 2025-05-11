@@ -1,7 +1,7 @@
 :root {
   --color-primary: #1e90ff;
-  --color-secondary: #ff6347;
-  --color-tertiary: #32cd32;
+  --color-secondary: #ff8c00;
+  --color-tertiary: #e83b31;
   --color-text: #000000;
   --color-background: #b0e0e6;
   --color-white: #ffffff;
@@ -124,15 +124,15 @@ li.dark {
   color: var(--color-white);
 }
 
-#popup {
+#popup.dark {
   background-color: var(--dark-theme-body);
 }
 
-#popup-title {
+#popup-title.dark {
   color: var(--dark-button);
 }
 
-#popup-message {
+#popup-message.dark {
   color: var(--color-white);
 }
 
@@ -146,6 +146,13 @@ li.dark {
 
 #draw.dark {
   background-color: var(--dark-draw);
+}
+
+.delete {
+  width: 15px;
+  cursor: pointer;
+  position: absolute;
+  top: auto;
 }
 
 .container__body {

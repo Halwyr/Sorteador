@@ -3,6 +3,7 @@ const drawListOptions = [];
 const addNewOptionButton = document.getElementById("addOption");
 const drawListButton = document.getElementById("draw");
 const cleanListButton = document.getElementById("toClean");
+const list = document.getElementById("list_options");
 
 const messages = {
   emptyField: "É necessário informar uma opção.",
@@ -19,6 +20,9 @@ function addOptions() {
   const optionInput = document.getElementById("choice");
   const optionValue = optionInput.value.trim();
   const normalizedValue = optionValue.toLowerCase();
+  const optionsImg = document.createElement("img");
+  optionsImg.setAttribute("src", "./img/remocao.png");
+  optionsImg.classList.add("delete");
 
   if (!optionValue) {
     showPopup("Atenção!", messages.emptyField);
@@ -32,15 +36,29 @@ function addOptions() {
 
   drawListOptions.push(optionValue);
 
-  const list = document.getElementById("list_options");
   const newOptionItem = document.createElement("li");
-  newOptionItem.document.createElement("img");
-  newOptionItem.setAttribute("src", "./img/remocao.png");
-  newOptionItem.textContent = optionValue;
+  const spanOptions = document.createElement("span");
+  spanOptions.textContent = optionValue;
+  newOptionItem.appendChild(spanOptions);
+  newOptionItem.appendChild(optionsImg);
   list.appendChild(newOptionItem);
 
   optionInput.value = "";
 }
+
+document.getElementById("list_options").addEventListener("click", (evento) => {
+  if (evento.target.classList.contains("delete")) {
+    const li = evento.target.parentElement;
+    const liText = li.querySelector("span").textContent;
+
+    const indexLi = drawListOptions.indexOf(liText);
+    if (indexLi !== -1) {
+      drawListOptions.splice(indexLi, 1);
+    }
+
+    li.remove();
+  }
+});
 
 function drawList() {
   if (drawListOptions.length === 0) {

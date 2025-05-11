@@ -1,107 +1,141 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Soteador para ajudar a escolher entre várias opções.">
-    <meta name="keywords" content="sorteador, sorteio, opções, aleatório, indeciso">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Soteador para ajudar a escolher entre várias opções."
+    />
+    <meta
+      name="keywords"
+      content="sorteador, sorteio, opções, aleatório, indeciso"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Montserrat:ital@0;1&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="./styles/style.css">
-    <link rel="icon" href="/img/sorteio.svg" type="image/x-icon">
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Montserrat:ital@0;1&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles/style.css" />
+    <link rel="icon" href="/img/sorteio.svg" type="image/x-icon" />
     <title>Sorteador</title>
-</head>
+  </head>
 
-<body class="container__body">
-
+  <body class="container__body">
     <main class="container__main">
-
-        <h1 class="theme-description">Tema da Página:</h1>
-        <div class="themes">
-            <img class="clear_theme" src="./img/tema_claro.png" alt="Seleção de tema - Modo Claro">
-            <div class="rail" id="rail">
-                <div class="indicator"></div>
-            </div>
-            <img class="dark_theme" src="./img/tema_escuro.png" alt="Seleção de tema - Modo Escuro">
+      <h1 class="theme-description">Tema da Página:</h1>
+      <div class="themes">
+        <img
+          class="clear_theme"
+          src="./img/tema_claro.png"
+          alt="Seleção de tema - Modo Claro"
+        />
+        <div class="rail" id="rail">
+          <div class="indicator"></div>
         </div>
+        <img
+          class="dark_theme"
+          src="./img/tema_escuro.png"
+          alt="Seleção de tema - Modo Escuro"
+        />
+      </div>
 
-        <p class="desc">Este sistema foi criado para acabar com a indecisão de forma simples e divertida. Com ele, você
-            pode:</p>
+      <p class="desc">
+        Este sistema foi criado para acabar com a indecisão de forma simples e
+        divertida. Com ele, você pode:
+      </p>
 
-        <ul class="list container__desc">
-            <li>
-                <h3>Inserir e organizar opções facilmente;</h3>
-            </li>
+      <ul class="list container__desc">
+        <li>
+          <h3>Inserir e organizar opções facilmente;</h3>
+        </li>
 
-            <li>
-                <h3>Visualizar todas as opções já adicionadas;</h3>
-            </li>
-            <li>
-                <h3>Sortear uma opção aleatória com um clique;</h3>
-            </li>
+        <li>
+          <h3>Visualizar todas as opções já adicionadas;</h3>
+        </li>
+        <li>
+          <h3>Sortear uma opção aleatória com um clique;</h3>
+        </li>
+      </ul>
+
+      <p class="desc">
+        Seja para decidir onde jantar, o que fazer no fim de semana ou qualquer
+        escolha difícil,<br />
+        o sorteador é a solução perfeita para casais indecisos (sim, entendemos
+        vocês!)<br />
+        ou qualquer pessoa que precise de uma ajudinha na tomada de decisões.
+      </p>
+
+      <section class="container__pag">
+        <h1 class="instructions"><strong>Regras do Sorteador:</strong></h1>
+        <ul class="list">
+          <li>
+            <h3>Insira, ao lado, as opções que deseja sortear.</h3>
+          </li>
+          <li>
+            <h3>O sistema funcionará com pelo menos duas opções.</h3>
+          </li>
+          <li>
+            <h3>Opções duplicadas não serão aceitas.</h3>
+          </li>
+          <li>
+            <h3>Não serão aceitos campos em branco.</h3>
+          </li>
         </ul>
 
-        <p class="desc">Seja para decidir onde jantar, o que fazer no fim de semana ou qualquer escolha difícil,<br>
-            o sorteador é a solução perfeita para casais indecisos (sim, entendemos vocês!)<br>
-            ou qualquer pessoa que precise de uma ajudinha na tomada de decisões.
-        </p>
+        <form class="form">
+          <label for="choice" class="form__label"
+            >No campo abaixo, insira suas opções:</label
+          >
+          <input
+            id="choice"
+            class="form__input"
+            type="text"
+            placeholder="Insira as Opções:"
+            required
+          />
+          <div class="buttons">
+            <button
+              id="addOption"
+              type="button"
+              class="button__primary"
+              aria-label="Adicionar opção"
+            >
+              Adicionar
+            </button>
+            <button id="draw" type="button" class="button__secondary">
+              Sortear
+            </button>
+            <button id="toClean" type="button" class="button__terciary">
+              Limpar
+            </button>
+          </div>
+        </form>
+      </section>
 
-        <section class="container__pag">
-            <h1 class="instructions"><strong>Regras do Sorteador:</strong></h1>
-            <ul class="list">
-                <li>
-                    <h3>Insira, ao lado, as opções que deseja sortear.</h3>
-                </li>
-                <li>
-                    <h3>O sistema funcionará com pelo menos duas opções.</h3>
-                </li>
-                <li>
-                    <h3>Opções duplicadas não serão aceitas.</h3>
-                </li>
-                <li>
-                    <h3>Não serão aceitos campos em branco.</h3>
-                </li>
+      <section class="results">
+        <article>
+          <p class="options">Opções Inseridas:</p>
+          <div class="container__options">
+            <ul id="list_options">
             </ul>
-
-            <form class="form">
-                <label for="choice" class="form__label">No campo abaixo, insira suas opções:</label>
-                <input id="choice" class="form__input" type="text" placeholder="Insira as Opções:" required>
-                <div class="buttons">
-                    <button id="addOption" type="button" class="button__primary"
-                        aria-label="Adicionar opção">Adicionar</button>
-                    <button id="draw" type="button" class="button__secondary">Sortear</button>
-                    <button id="toClean" type="button" class="button__terciary">Limpar</button>
-                </div>
-            </form>
-        </section>
-
-        <section class="results">
-            <article>
-                <p class="options">Opções Inseridas:</p>
-                <div class="container__options">
-                    <ul id="list_options">
-                    </ul>
-                </div>
-            </article>
-            <p class="container__draw">Opção Sorteada:</p>
-            <div id="draw_result"></div>
-        </section>
+          </div>
+        </article>
+        <p class="container__draw">Opção Sorteada:</p>
+        <div id="draw_result"></div>
+      </section>
     </main>
 
     <div class="popup-overlay" id="overlay" onclick="closePopup()"></div>
     <div class="popup" id="popup">
-        <h2 id="popup-title"></h2>
-        <p id="popup-message" class="message"></p>
-        <button class="button-close" onclick="closePopup()">Fechar</button>
+      <h2 id="popup-title"></h2>
+      <p id="popup-message" class="message"></p>
+      <button class="button-close" onclick="closePopup()">Fechar</button>
     </div>
 
     <script src="js/script.js" defer></script>
     <script src="js/themes.js"></script>
     <script src="js/popup.js"></script>
-</body>
-
+  </body>
 </html>
