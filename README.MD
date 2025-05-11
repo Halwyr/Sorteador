@@ -21,7 +21,7 @@ Seja você uma pessoa indecisa ou parte de um casal (assim como eu e minha namor
 - **Sorteio aleatório:** Gere uma escolha entre as opções fornecidas.
 - **Interação Melhorada:** Pop-ups para mensagens ao usuário.
 - **Limpeza da Lista:** Apague todas as opções de forma simples.
-
+- **Remoção de Opções:** Remova as opções que não deseja utilizar sem precisar limpar toda a lista.
 ---
 
 ## 🚧 **Status do Projeto:**
