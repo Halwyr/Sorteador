@@ -12,6 +12,7 @@ const darkPopupMessage = document.getElementById("popup-message");
 const darkAddOption = document.getElementById("addOption");
 const darkDraw = document.getElementById("draw");
 const darkToClean = document.getElementById("toClean");
+const darkImport = document.getElementById("import")
 
 themeChange.addEventListener("click", () => {
   themeChange.classList.toggle("dark");
@@ -26,6 +27,7 @@ themeChange.addEventListener("click", () => {
   darkAddOption.classList.toggle("dark");
   darkDraw.classList.toggle("dark");
   darkToClean.classList.toggle("dark");
+  darkImport.classList.toggle("dark")
 
   themeText.forEach(function (h3) {
     h3.classList.toggle("dark");

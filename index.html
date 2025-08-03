@@ -18,7 +18,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./styles/style.css" />
-    <link rel="icon" href="/img/sorteio.svg" type="image/x-icon" />
+    <link rel="icon" href="/img/sorteio.png" type="image/x-icon" />
     <title>Sorteador</title>
   </head>
 
@@ -57,21 +57,16 @@
         <li>
           <h3>Sortear uma opção aleatória com um clique;</h3>
         </li>
+        <li>
+          <h3>Importar um arquivo para sortear;</h3>
+        </li>
       </ul>
-
-      <p class="desc">
-        Seja para decidir onde jantar, o que fazer no fim de semana ou qualquer
-        escolha difícil,<br />
-        o sorteador é a solução perfeita para casais indecisos (sim, entendemos
-        vocês!)<br />
-        ou qualquer pessoa que precise de uma ajudinha na tomada de decisões.
-      </p>
 
       <section class="container__pag">
         <h1 class="instructions"><strong>Regras do Sorteador:</strong></h1>
         <ul class="list">
           <li>
-            <h3>Insira, ao lado, as opções que deseja sortear.</h3>
+            <h3>Insira, abaixo, as opções que deseja sortear.</h3>
           </li>
           <li>
             <h3>O sistema funcionará com pelo menos duas opções.</h3>
@@ -82,11 +77,29 @@
           <li>
             <h3>Não serão aceitos campos em branco.</h3>
           </li>
+          <li>
+            <h3>Você pode importar um arquivo para selecionar as opções.</h3>
+          </li>
+          <li>
+            <h3>
+              Ao importar um arquivo em planilha, o sistema pegará com base a
+              Coluna A para o sorteio.
+            </h3>
+          </li>
+          <li>
+            <h3>Caso haja dados na Coluna A e na Coluna D, ele serão concatenados.</h3>
+          </li>
+          <li>
+            <h3>
+              São permitidos somentes arquivos com as seguintes extensões: .xls,
+              .xlsx ou .txt
+            </h3>
+          </li>
         </ul>
 
         <form class="form">
           <label for="choice" class="form__label"
-            >No campo abaixo, insira suas opções:</label
+            >No campo abaixo, insira suas opções ou importe um arquivo:</label
           >
           <input
             id="choice"
@@ -110,6 +123,15 @@
             <button id="toClean" type="button" class="button__terciary">
               Limpar
             </button>
+            <button id="import" type="button" class="button__quarternary">
+              <input
+                type="file"
+                id="file-upload"
+                accept=".xls,.xlsx, .txt"
+                style="display: none"
+              />
+              Importa Arquivo
+            </button>
           </div>
         </form>
       </section>
@@ -118,8 +140,7 @@
         <article>
           <p class="options">Opções Inseridas:</p>
           <div class="container__options">
-            <ul id="list_options">
-            </ul>
+            <ul id="list_options"></ul>
           </div>
         </article>
         <p class="container__draw">Opção Sorteada:</p>
@@ -133,6 +154,11 @@
       <p id="popup-message" class="message"></p>
       <button class="button-close" onclick="closePopup()">Fechar</button>
     </div>
+
+    <!-- SheetJS (Excel) -->
+    <script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
+    <!-- Mammoth (Word) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mammoth/1.4.2/mammoth.browser.min.js"></script>
 
     <script src="js/script.js" defer></script>
     <script src="js/themes.js"></script>
