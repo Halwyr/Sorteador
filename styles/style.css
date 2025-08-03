@@ -2,7 +2,7 @@
   --color-primary: #1e90ff;
   --color-secondary: #ff8c00;
   --color-tertiary: #e83b31;
-  --color-quarternary: #228B22;
+  --color-quarternary: #228b22;
   --color-text: #000000;
   --color-background: #b0e0e6;
   --color-white: #ffffff;
@@ -427,6 +427,19 @@ li.dark {
   .form__input,
   .buttons {
     font-size: 0.5em;
+  }
+
+  .buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; 
+    gap: 10px;
+  }
+
+  .buttons button {
+    flex: 1 1 auto; 
+    max-width: 150px;
+    font-size: 0.8em;
   }
 
   .popup {
